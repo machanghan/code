@@ -1,0 +1,87 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #BE1E2D;
+  overflow: hidden;
+}
+
+.heart {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation-name: radiate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+}
+.heart path {
+  fill: #fff;
+}
+
+.heart:nth-child(1) {
+  animation-delay: -1s;
+}
+
+.heart:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.heart:nth-child(3) {
+  animation-delay: -3s;
+}
+
+.heart:nth-child(4) {
+  animation-delay: -4s;
+}
+
+.heart:nth-child(5) {
+  animation-delay: -5s;
+}
+
+@keyframes radiate {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  1% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+/* Layer animations for extra fun
+//
+.heart path {
+  animation: 5s x infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes x {
+  0% {
+    transform:scale(1)
+  }
+  10%{
+    transform: scale(0.95)
+  }
+
+  40% {
+    transform: scale(1)
+  }
+  60% {
+    transform: scale(0.95)
+  }
+
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+*/
